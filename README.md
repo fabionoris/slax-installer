@@ -14,3 +14,11 @@ Here is a simple utility to easily install [Slax](https://www.slax.org/).
    ./install.sh
    ```
 3. Remove the installation media when Slax is rebooting
+
+## Troubleshooting
+
+If you get a _"unable to resolve host address"_ error, change the DNS:
+
+```
+printf "nameserver 8.8.8.8\nnameserver 8.8.4.4\n" > /etc/resolv.conf
+```
