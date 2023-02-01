@@ -4,9 +4,9 @@ mkfs.ext4 /dev/sda1
 mkdir /mnt/slax
 mount /dev/sda1 /mnt/slax
 echo "Copy Slax files"
-cp -Rpv /run/initramfs/memory/data/slax/. /mnt/slax
+cp -Rpv /run/initramfs/memory/data/slax /mnt/slax
 echo "Install Slax"
-cd /mnt/slax/boot
+cd /mnt/slax/slax/boot
 sed -ie 's/read junk//g' bootinst.sh
 ./bootinst.sh
 echo "Shutdown"
